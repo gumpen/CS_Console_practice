@@ -10,6 +10,8 @@ namespace CS_Console_practice
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hello,world!");
+            Console.ReadKey();
         }
     }
 }
