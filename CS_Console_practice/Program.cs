@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace CS_Console_practice
 {
 	// Main
-    class main
+    class Main_class
     {
 		static void Main(string[] args)
 		{
-
+			Stopwatch sw = new Stopwatch();
+			sw.Start();
 			Sort_test.Sort_test1();
+			sw.Stop();
+			Console.WriteLine(sw.Elapsed);
 			Console.ReadKey();
 		}
     }
@@ -34,7 +38,7 @@ namespace CS_Console_practice
 	{
 		public static void Sort_test1()
 		{
-			int n = 100;
+			int n = 100000;
 
 			//初期配列
 			int[] data1 = new int[n];
@@ -43,7 +47,7 @@ namespace CS_Console_practice
 			{
 				data1[i] = i + 1;
 			}
-			Display.Display_array(data1);
+			//Display.Display_array(data1);
 
 			var ran = new Random();
 
@@ -58,7 +62,7 @@ namespace CS_Console_practice
 
 			}
 
-			Display.Display_array(data1);
+			//Display.Display_array(data1);
 
 		}
 
